@@ -86,6 +86,6 @@ yarn-error.log*
 # WebStorm IDE
 .idea
 
-# yarn
+# yarn / package.json
 yarn.lock
-
+package-lock.json
