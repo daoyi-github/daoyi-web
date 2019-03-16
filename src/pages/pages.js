@@ -1,11 +1,12 @@
 import React from "react";
 import { renderRoutes } from "react-router-config";
+import HomePage from "./HomePage/HomePage";
 
 /**
  * These are root pages
  */
 const Home = () => {
-    return <h3>Home</h3>;
+    return <HomePage />;
 };
 
 const Services = () => {

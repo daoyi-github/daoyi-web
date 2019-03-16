@@ -18,6 +18,7 @@ const routes = [
         name: "products",
         path: `${rootPath}/products`,
         component: Products,
+        dropDown: true,
         routes: [
             {
                 name: "apps",
