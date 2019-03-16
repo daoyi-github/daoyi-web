@@ -4,44 +4,40 @@ import { renderRoutes } from "react-router-config";
 /**
  * These are root pages
  */
-const Home = ({ location }) => {
+const Home = () => {
     return <h3>Home</h3>;
 };
 
-const Services = ({ route, location }) => {
+const Services = () => {
     return (
         <div>
             <h3>Services</h3>
+        </div>
+    );
+};
+
+const Products = ({ route }) => {
+    return (
+        <div>
+            <h3>Products</h3>
             {renderRoutes(route.routes)}
         </div>
     );
 };
 
-const Products = ({ location }) => {
-    return (
-        <div>
-            <h3>Products</h3>
-        </div>
-    );
-};
-
-const Contact = ({ location }) => {
+const Contact = () => {
     return <h3>Contact</h3>;
 };
 
 /**
  * These are pages nested in Services
  */
-const DigitalHumanity = () => {
-    return <h3>DigitalHumanity</h3>;
-};
-
-const WebDev = () => {
-    return <h3>WebDev</h3>;
-};
-
 const AppDev = () => {
     return <h3>AppDev</h3>;
 };
 
-export { Home, Services, Products, Contact, DigitalHumanity, WebDev, AppDev };
+const Projects = () => {
+    return <h3>Projects</h3>;
+};
+
+export { Home, Services, Products, Contact, AppDev, Projects };

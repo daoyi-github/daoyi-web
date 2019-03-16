@@ -20,13 +20,7 @@ const menuList = (routes, activeItem, handleItemClick) => {
 class NavBar extends Component {
     state = { activeItem: "home" };
 
-    handleItemClick = (e, { name }) => {
-        const curMenu = this.props.routes.find(r => {
-            return r.name === name;
-        });
-        console.log(name, curMenu);
-        this.setState({ activeItem: name });
-    };
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
     render() {
         const { activeItem } = this.state;

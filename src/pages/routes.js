@@ -1,12 +1,4 @@
-import {
-    Home,
-    Services,
-    Products,
-    Contact,
-    DigitalHumanity,
-    WebDev,
-    AppDev
-} from "./pages";
+import { Home, Services, Products, Contact, AppDev, Projects } from "./pages";
 // const rootPath = process.env.PUBLIC_URL;
 const rootPath = "";
 
@@ -20,29 +12,24 @@ const routes = [
     {
         name: "service",
         path: `${rootPath}/service`,
-        component: Services,
-        routes: [
-            {
-                name: "dh",
-                path: `${rootPath}/service/dh`,
-                component: DigitalHumanity
-            },
-            {
-                name: "webdev",
-                path: `${rootPath}/service/webdev`,
-                component: WebDev
-            },
-            {
-                name: "appdev",
-                path: `${rootPath}/service/appdev`,
-                component: AppDev
-            }
-        ]
+        component: Services
     },
     {
         name: "products",
         path: `${rootPath}/products`,
-        component: Products
+        component: Products,
+        routes: [
+            {
+                name: "apps",
+                path: `${rootPath}/products/apps`,
+                component: AppDev
+            },
+            {
+                name: "projects",
+                path: `${rootPath}/products/projects`,
+                component: Projects
+            }
+        ]
     },
     {
         name: "contact",
