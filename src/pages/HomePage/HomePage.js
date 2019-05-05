@@ -1,11 +1,18 @@
 import React, { Component } from "react";
+import ReactSWFCompat from "react-swf/compat";
 
 class HomePage extends Component {
     render() {
         return (
-            <h1>
-                This is the new HomePage.
-            </h1>
+            <ReactSWFCompat
+                container={<div style={{ background: "#cccccc" }} />}
+                src="swf/example.swf"
+                id="guid_001"
+                width="80%"
+                height="80%"
+                wmode="transparent"
+                flashVars={{ foo: "A", bar: 1 }}
+            />
         );
     }
 }
